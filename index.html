@@ -3,60 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Voxel Web Design - Professional web design services and digital solutions.">
-    <title>Voxel Web Design | Modern Digital Solutions</title>
+    <title>Voxel Web Design | Premium Solutions</title>
     <style>
+        :root {
+            --glacier-1: #001219;
+            --glacier-2: #005f73;
+            --glacier-3: #0a9396;
+            --glacier-4: #94d2bd;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a; /* Sleek dark blue/black */
+            font-family: 'Inter', -apple-system, sans-serif;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #f8fafc;
+            overflow: hidden;
+            /* Animated Fluid Gradient Background */
+            background: linear-gradient(-45deg, var(--glacier-1), var(--glacier-2), var(--glacier-3), var(--glacier-4));
+            background-size: 400% 400%;
+            animation: fluidGradient 15s ease infinite;
         }
-        .container {
-            text-align: center;
-            background: #1e293b;
+
+        @keyframes fluidGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            max-width: 600px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 500px;
             width: 90%;
-            border: 1px solid #334155;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
-        h1 { margin-bottom: 0.5rem; font-size: 2.5rem; color: #fff; }
-        p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; }
+
+        @keyframes fadeInUp {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        p {
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
         .btn {
             display: inline-block;
-            margin-top: 1.5rem;
-            padding: 14px 32px;
-            background-color: #38bdf8; /* Professional Blue */
-            color: #0f172a;
+            background: var(--glacier-4);
+            color: var(--glacier-1);
+            padding: 16px 36px;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 8px;
             font-weight: 700;
-            transition: transform 0.2s, background-color 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(148, 210, 189, 0.3);
         }
-        .btn:hover { 
-            background-color: #7dd3fc; 
-            transform: translateY(-2px);
+
+        .btn:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 8px 25px rgba(148, 210, 189, 0.5);
+            background: #fff;
         }
-        .footer { margin-top: 2rem; font-size: 0.85rem; color: #64748b; }
+
+        .footer {
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.75rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="card">
         <h1>Voxel Web Design</h1>
-        <p>Expertly crafted digital experiences for the modern web.</p>
+        <p>Premium digital architecture with a focus on high-performance aesthetics.</p>
         
-        <a href="https://voxelwebdesign.fourthwall.com" class="btn">View Our Services & Shop</a>
+        <a href="https://voxelwebdesign.dpdns.org" class="btn">Enter Experience</a>
 
         <div class="footer">
-            &copy; 2026 Voxel Web Design. All rights reserved. <br>
-            Unauthorized duplication or use of this site's code is prohibited.
+            &copy; 2026 Voxel Web Design. All rights reserved.
         </div>
     </div>
 
